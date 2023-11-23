@@ -1,7 +1,16 @@
-import Image from 'next/image'
 
-export default function Home() {
+import { getProductsData } from '@/gettingAPI/api'
+
+import { ProductCard } from '@/components/ProductCard'
+
+
+export default async function Home() {
+
+  const products = await getProductsData()
+
   return (
-    <div>Hei!!</div>
+        
+      < ProductCard data={products} />
+
   )
 }
