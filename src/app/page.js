@@ -10,7 +10,8 @@ export default async function Home() {
 
   return (
         
+    <div>
       < ProductCard data={products} />
-
+    </div>
   )
 }
